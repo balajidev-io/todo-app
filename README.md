@@ -1,141 +1,156 @@
-📝 Todo App — Flutter + Firebase
-A fully functional Todo List App built with Flutter, featuring Firebase Authentication and Firebase Realtime Database. Developed as part of a Flutter Developer hiring task for Herody, Bangalore.
+Flutter Todo App
 
-📱 Screenshots
+A fully functional Todo List application built with Flutter and Firebase that allows users to manage their daily tasks with secure authentication and real-time database storage.
 
-Login Screen | Home Screen | Add Task | Task Management
+📌 Project Description
 
+This project is a Flutter-based Todo List application integrated with Firebase Authentication and Firebase Realtime Database.
+
+Users can sign up or log in securely and manage their personal tasks including adding, editing, completing, and deleting tasks. The application demonstrates clean project structure, Provider state management, and REST API communication with Firebase.
+
+This project was developed as part of a Flutter Developer hiring task for Herody, Bangalore.
 
 🚀 Features
 
 🔐 User Authentication
 
-Email & Password Sign Up / Sign In
+Email & Password Sign Up / Login
+
 Google Sign In
-Persistent login state
+
+Persistent login session
+
 Secure logout
 
+📝 Task Management
 
-✅ Task Management
+View all tasks
 
-View all tasks (All / Pending / Done tabs)
-Add new tasks with title & description
+Add new tasks
+
 Edit existing tasks
-Mark tasks as completed
-Delete tasks with confirmation dialog
 
+Mark tasks as completed
+
+Delete tasks with confirmation dialog
 
 🔄 State Management
 
 Provider for Authentication state
-Provider for Task state
-Real-time UI updates
 
+Provider for Task state
+
+Automatic UI updates using notifyListeners()
 
 🔥 Firebase Integration
 
-Firebase Authentication (Email/Password + Google)
-Firebase Realtime Database via REST API calls
-Per-user task isolation
+Firebase Authentication
 
+Firebase Realtime Database
+
+REST API communication
+
+User-specific task storage
 
 📱 Responsive UI
 
-Works on all screen sizes
-Material Design 3
-Clean and modern interface
+Works on different screen sizes
 
+Clean Material Design interface
 
+🛠 Technologies Used
 
+Flutter
 
-🛠️ Tech Stack
-TechnologyUsageFlutterUI FrameworkDartProgramming LanguageFirebase AuthUser AuthenticationFirebase Realtime DatabaseCloud DatabaseProviderState ManagementHTTPREST API callsGoogle Sign InOAuth Authentication
+Dart
 
-📁 Project Structure
-todo_app/
-├── lib/
-│   ├── main.dart                   # App entry point + MultiProvider setup
-│   ├── firebase_options.dart       # Firebase configuration
-│   ├── models/
-│   │   └── task_model.dart         # Task data model
-│   ├── providers/
-│   │   ├── auth_provider.dart      # Authentication state management
-│   │   └── task_provider.dart      # Task state management
-│   ├── screens/
-│   │   ├── splash_screen.dart      # Auth gate screen
-│   │   ├── login_screen.dart       # Login UI
-│   │   ├── signup_screen.dart      # Registration UI
-│   │   └── home_screen.dart        # Main tasks screen
-│   ├── services/
-│   │   └── firebase_service.dart   # Firebase REST API calls
-│   └── widgets/
-│       ├── task_tile.dart          # Task card widget
-│       └── add_edit_task_sheet.dart # Bottom sheet for add/edit
-├── android/
-│   └── app/
-│       └── google-services.json    # Firebase Android config
-└── pubspec.yaml                    # Dependencies
+Firebase Authentication
 
+Firebase Realtime Database
+
+Provider (State Management)
+
+HTTP Package (REST API)
+
+Google Sign In
+
+UUID (Task ID generation)
+
+Intl (Date formatting)
+
+📂 Project Structure
+todo_app
+│
+├── lib
+│   ├── main.dart
+│   ├── firebase_options.dart
+│
+│   ├── models
+│   │   └── task_model.dart
+│
+│   ├── providers
+│   │   ├── auth_provider.dart
+│   │   └── task_provider.dart
+│
+│   ├── screens
+│   │   ├── splash_screen.dart
+│   │   ├── login_screen.dart
+│   │   ├── signup_screen.dart
+│   │   └── home_screen.dart
+│
+│   ├── services
+│   │   └── firebase_service.dart
+│
+│   └── widgets
+│       ├── task_tile.dart
+│       └── add_edit_task_sheet.dart
+│
+├── android
+│   └── app
+│       └── google-services.json
+│
+└── pubspec.yaml
 ⚙️ Setup & Installation
-Prerequisites
-
-Flutter SDK (>= 3.0.0)
-Android Studio / VS Code
-Firebase account
-
-Steps
-
-Clone the repository
-
-bashgit clone https://github.com/balajidev-io/todo-app.git
+1️⃣ Clone the repository
+git clone https://github.com/balajidev-io/todo-app.git
 cd todo-app
+2️⃣ Install dependencies
+flutter pub get
+3️⃣ Firebase Setup
 
-Install dependencies
+Go to Firebase Console
 
-bashflutter pub get
+Create a new project
 
-Firebase Setup
-
-Create a Firebase project at console.firebase.google.com
 Enable Email/Password Authentication
+
 Enable Realtime Database
-Download google-services.json and place in android/app/
-Update lib/firebase_options.dart with your config values
 
+Download google-services.json
 
-Run the app
+Place it inside
 
-bashflutter run
+android/app/
 
-Build APK
+Update your firebase_options.dart with Firebase configuration values.
 
-bashflutter build apk --release
-
+4️⃣ Run the app
+flutter run
+5️⃣ Build APK
+flutter build apk --release
 📦 Dependencies
-yamldependencies:
-  firebase_core: ^3.1.0
-  firebase_auth: ^5.1.0
-  google_sign_in: ^6.2.1
-  provider: ^6.1.2
-  http: ^1.2.1
-  shared_preferences: ^2.2.3
-  fluttertoast: ^8.2.5
-  uuid: ^4.4.0
-  intl: ^0.19.0
-
-📲 Download APK
-👉 Download Latest APK
-
-🏗️ Architecture
-UI Layer (Screens & Widgets)
-        ↓
-State Layer (Providers)
-        ↓
-Service Layer (FirebaseService)
-        ↓
-Firebase Realtime Database (REST API)
-
+firebase_core: ^3.1.0
+firebase_auth: ^5.1.0
+google_sign_in: ^6.2.1
+provider: ^6.1.2
+http: ^1.2.1
+shared_preferences: ^2.2.3
+fluttertoast: ^8.2.5
+uuid: ^4.4.0
+intl: ^0.19.0
 👨‍💻 Developer
+
 Balaji
 
-GitHub: @balajidev-io
+GitHub
+https://github.com/balajidev-io
